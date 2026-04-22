@@ -1,10 +1,13 @@
-import { templateData } from '../data/templateData';
+import { homeData } from '../data/pages/homeData';
+import { projectsData } from '../data/pages/projectsData';
 import { ProjectCard } from '../components/ProjectCard';
 import { MethodCard } from '../components/MethodCard';
+import { SEO } from '../components/SEO';
 
 export function ProjectsPage() {
   return (
     <main className="pt-32 pb-20 max-w-7xl mx-auto px-8">
+      <SEO title={projectsData.metadata.title} description={projectsData.metadata.description} />
       <header className="mb-20">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest mb-6">
           <span className="w-2 h-2 rounded-full bg-primary-container animate-pulse" />
@@ -13,16 +16,16 @@ export function ProjectsPage() {
           </span>
         </div>
         <h1 className="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-none mb-8 text-on-background">
-          {templateData.projectsPage.title} <br />
-          <span className="text-primary-container text-glow-orange">{templateData.projectsPage.highlight}</span>
+          {projectsData.title} <br />
+          <span className="text-primary-container text-glow-orange">{projectsData.highlight}</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-400 max-w-2xl leading-relaxed">
-          {templateData.projectsPage.subtitle}
+          {projectsData.subtitle}
         </p>
       </header>
 
       <div className="flex flex-wrap gap-4 mb-16">
-        {templateData.projectsPage.filters.map((filter, index) => (
+        {projectsData.filters.map((filter, index) => (
           <button
             key={filter}
             className={
@@ -38,7 +41,7 @@ export function ProjectsPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {templateData.home.projects.map((card) => (
+        {homeData.projects.map((card) => (
           <ProjectCard
             key={card.title}
             category={card.category}
@@ -63,18 +66,21 @@ export function ProjectsPage() {
         <div className="absolute top-0 right-0 p-8">
           <span className="flex items-center gap-2 bg-primary-container text-on-primary-container px-4 py-2 rounded-full text-xs font-black animate-pulse">
             <span className="w-2 h-2 rounded-full bg-white" />
-            {templateData.projectsPage.ongoing.status}
+            {projectsData.ongoing.status}
           </span>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-4xl font-black mb-6 italic">{templateData.projectsPage.ongoing.title}</h3>
+            <h3 className="text-4xl font-black mb-6 italic">{projectsData.ongoing.title}</h3>
             <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
-              {templateData.projectsPage.ongoing.description}
+              {projectsData.ongoing.description}
             </p>
             <div className="flex gap-4">
-              {templateData.projectsPage.ongoing.tags.map((tag) => (
-                <span key={tag} className="px-4 py-2 bg-surface-container-highest rounded-lg text-sm font-bold">
+              {projectsData.ongoing.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-4 py-2 bg-surface-container-highest rounded-lg text-sm font-bold"
+                >
                   {tag}
                 </span>
               ))}
@@ -82,8 +88,8 @@ export function ProjectsPage() {
           </div>
           <div className="morph-inset bg-surface-container-lowest rounded-2xl p-6 border border-white/5">
             <div className="flex items-center justify-between mb-4">
-              <span className="font-bold text-secondary">{templateData.projectsPage.ongoing.progressLabel}</span>
-              <span className="font-bold">{templateData.projectsPage.ongoing.progressValue}</span>
+              <span className="font-bold text-secondary">{projectsData.ongoing.progressLabel}</span>
+              <span className="font-bold">{projectsData.ongoing.progressValue}</span>
             </div>
             <div className="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
               <div className="h-full bg-gradient-to-r from-secondary to-primary-container w-[85%] rounded-full shadow-[0_0_10px_rgba(6,182,212,0.5)]" />
@@ -95,12 +101,14 @@ export function ProjectsPage() {
       <section className="mt-40 mb-32">
         <div className="text-center mb-20">
           <h2 className="font-headline text-5xl font-black text-on-background mb-4 uppercase tracking-tighter">
-            {templateData.projectsPage.methodTitle}
+            {projectsData.methodTitle}
           </h2>
-          <p className="text-on-surface-variant max-w-2xl mx-auto text-lg">{templateData.projectsPage.methodSubtitle}</p>
+          <p className="text-on-surface-variant max-w-2xl mx-auto text-lg">
+            {projectsData.methodSubtitle}
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {templateData.home.methodSteps.map((step) => (
+          {homeData.methodSteps.map((step) => (
             <MethodCard
               key={step.number}
               number={step.number}
@@ -120,13 +128,19 @@ export function ProjectsPage() {
             Prêt à transformer <br />
             <span className="text-primary-container">votre vision en réalité ?</span>
           </h2>
-          <p className="text-xl text-slate-400 mb-12 max-w-xl">{templateData.projectsPage.ctaDescription}</p>
+          <p className="text-xl text-slate-400 mb-12 max-w-xl">{projectsData.ctaDescription}</p>
           <div className="flex flex-wrap gap-6">
-            <button className="bg-primary-container text-on-primary-container px-10 py-5 rounded-2xl font-black text-lg shadow-[0_0_30px_rgba(249,115,22,0.4)] hover:scale-105 transition-all" type="button">
-              {templateData.projectsPage.ctaPrimary}
+            <button
+              className="bg-primary-container text-on-primary-container px-10 py-5 rounded-2xl font-black text-lg shadow-[0_0_30px_rgba(249,115,22,0.4)] hover:scale-105 transition-all"
+              type="button"
+            >
+              {projectsData.ctaPrimary}
             </button>
-            <button className="bg-surface-container-highest text-on-surface px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all morph-card" type="button">
-              {templateData.projectsPage.ctaSecondary}
+            <button
+              className="bg-surface-container-highest text-on-surface px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all morph-card"
+              type="button"
+            >
+              {projectsData.ctaSecondary}
             </button>
           </div>
         </div>
