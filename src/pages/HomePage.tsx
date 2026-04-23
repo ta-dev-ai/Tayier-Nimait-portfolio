@@ -12,19 +12,20 @@ export function HomePage({ onNavigate }: Props) {
   return (
     <>
       <SEO title={homeData.metadata.title} description={homeData.metadata.description} />
-      <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+      <section className="relative min-h-screen flex items-center pt-32 lg:pt-40 pb-20 overflow-hidden">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
         <div className="absolute top-1/2 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-[100px]" />
         <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-12 items-center">
           <div className="z-10">
-            <span className="text-secondary font-bold tracking-widest uppercase mb-4 block">
-              {homeData.eyebrow}
-            </span>
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-surface-container-high border border-white/5 mb-8">
+              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+              <span className="text-secondary text-xs lg:text-sm font-bold uppercase tracking-widest">
+                {homeData.eyebrow}
+              </span>
+            </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-on-background leading-tight md:leading-[1.1] mb-6 tracking-tight">
               {homeData.headlineBefore}{' '}
-              <span className="text-primary-container text-glow-orange">
-                {homeData.highlighted}
-              </span>{' '}
+              <span className="text-primary-container">{homeData.highlighted}</span>{' '}
               {homeData.headlineAfter}
             </h1>
             <p className="text-xl md:text-2xl text-on-surface-variant font-light mb-10 max-w-xl leading-relaxed">
@@ -37,13 +38,18 @@ export function HomePage({ onNavigate }: Props) {
               >
                 {homeData.primaryAction}
               </button>
-              <button type="button" className="flex items-center gap-4 group cursor-pointer">
+              <button
+                type="button"
+                className="flex items-center gap-4 group cursor-pointer h-[60px]"
+              >
                 <div className="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center morph-outset group-hover:bg-secondary transition-colors">
                   <span className="material-symbols-outlined text-secondary group-hover:text-on-secondary">
                     play_arrow
                   </span>
                 </div>
-                <span className="font-bold text-on-surface">{homeData.secondaryAction}</span>
+                <span className="font-bold text-slate-300 group-hover:text-white transition-colors">
+                  {homeData.secondaryAction}
+                </span>
               </button>
             </div>
           </div>
@@ -54,24 +60,31 @@ export function HomePage({ onNavigate }: Props) {
                 className="rounded-[2.5rem] w-full h-[600px] object-cover"
                 src={homeData.heroImage}
               />
-              <div className="absolute bottom-12 left-12 right-12 p-8 glass-nav rounded-2xl morph-outset border border-white/10">
-                <div className="flex justify-between items-center">
+              <div className="absolute bottom-6 left-6 right-6 lg:bottom-10 lg:left-10 lg:right-10 p-6 lg:p-8 glass-nav rounded-2xl morph-outset border border-white/10">
+                <div className="flex flex-wrap justify-between items-center gap-4">
                   <div>
-                    <div className="text-secondary font-bold text-sm uppercase">
+                    <div className="text-secondary font-bold text-[10px] lg:text-xs uppercase tracking-widest mb-1">
                       {homeData.metricOneLabel}
                     </div>
-                    <div className="text-4xl font-black text-on-surface">
+                    <div className="text-3xl lg:text-4xl font-black text-on-surface">
                       {homeData.metricOneValue}
                     </div>
                   </div>
-                  <div className="h-12 w-[2px] bg-white/10" />
+                  <div className="hidden md:block h-12 w-[1px] bg-white/10" />
                   <div>
-                    <div className="text-primary-container font-bold text-sm uppercase">
+                    <div className="text-primary-container font-bold text-[10px] lg:text-xs uppercase tracking-widest mb-1">
                       {homeData.metricTwoLabel}
                     </div>
-                    <div className="text-4xl font-black text-on-surface">
+                    <div className="text-3xl lg:text-4xl font-black text-on-surface">
                       {homeData.metricTwoValue}
                     </div>
+                  </div>
+                  <div className="hidden lg:block h-12 w-[1px] bg-white/10" />
+                  <div className="hidden lg:block">
+                    <div className="text-tertiary font-bold text-[10px] lg:text-xs uppercase tracking-widest mb-1">
+                      Projets Livrés
+                    </div>
+                    <div className="text-3xl lg:text-4xl font-black text-on-surface">12+</div>
                   </div>
                 </div>
               </div>

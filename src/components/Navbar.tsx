@@ -12,7 +12,7 @@ export function Navbar({ currentPage, onNavigate }: Props) {
   return (
     <nav className="fixed top-0 w-full z-50 glass-nav border-b border-white/10 backdrop-blur-xl">
       <div className="max-w-[1600px] mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+        <div className="flex-1 flex items-center gap-4">
           <button
             type="button"
             onClick={() => onNavigate('home')}
@@ -30,7 +30,7 @@ export function Navbar({ currentPage, onNavigate }: Props) {
           </div>
         </div>
 
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="hidden lg:flex flex-1 items-center justify-center gap-10">
           <button
             type="button"
             onClick={() => onNavigate('home')}
@@ -68,10 +68,7 @@ export function Navbar({ currentPage, onNavigate }: Props) {
           </button>
         </div>
 
-        <div className="flex items-center justify-end gap-3 lg:gap-4 ml-auto">
-          <button className="hidden md:flex items-center gap-2 bg-primary-container hover:scale-95 text-on-primary-container px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all">
-            Discuter d'un projet
-          </button>
+        <div className="flex-1 flex items-center justify-end gap-3 lg:gap-4 ml-auto">
           <button className="hidden sm:flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-bold transition-all">
             <span className="material-symbols-outlined text-[18px]">download</span>
             CV
