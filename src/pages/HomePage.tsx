@@ -20,7 +20,7 @@ export function HomePage({ onNavigate }: Props) {
             <span className="text-secondary font-bold tracking-widest uppercase mb-4 block">
               {homeData.eyebrow}
             </span>
-            <h1 className="text-6xl md:text-8xl font-black text-on-background leading-tight mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-on-background leading-tight md:leading-[1.1] mb-6 tracking-tight">
               {homeData.headlineBefore}{' '}
               <span className="text-primary-container text-glow-orange">
                 {homeData.highlighted}

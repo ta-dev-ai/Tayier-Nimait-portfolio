@@ -2,7 +2,7 @@ export const templateData = {
   site: {
     name: 'SNORBIK',
     owner: 'Tayier NIMAIT',
-    role: 'Développeur IA — Automatisation & Outils métier',
+    role: 'Développeur IA & Automatisation',
   },
   nav: {
     home: 'Accueil',

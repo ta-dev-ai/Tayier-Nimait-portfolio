@@ -4,20 +4,20 @@ export const homeData = {
     description:
       "Optimisez vos processus métier avec l'Intelligence Artificielle et l'automatisation. Expert en solutions RAG, agents autonomes et pipelines DATA.",
   },
-  eyebrow: 'Tayier NIMAIT — Développeur IA',
-  headlineBefore: 'Automatisation &',
-  highlighted: 'Outils métier',
-  headlineAfter: 'pour votre efficacité',
+  eyebrow: 'Pour PME, Startups et Équipes Métier',
+  headlineBefore: 'Je construis des',
+  highlighted: 'outils IA',
+  headlineAfter: 'qui automatisent vos tâches',
   description:
-    "J'automatise des tâches, je structure des workflows et je crée des outils utiles pour faire gagner du temps aux équipes et réduire les erreurs.",
-  primaryAction: 'Voir mes projets',
-  secondaryAction: 'Me contacter',
+    "J'aide les entreprises à transformer leurs processus manuels en systèmes automatisés fiables et performants.",
+  primaryAction: 'Voir des cas concrets',
+  secondaryAction: 'Discuter de votre projet',
   heroImage:
     'https://lh3.googleusercontent.com/aida-public/AB6AXuApmRGCoKbhSiin_WC57UxXcPr-Fz48b_sj86jUZNbJ7reLRcNJBGmGLj4HCmXjBywOcJI2SFz88hsbb0jKYLQ7Wxn1LCJQDiqqXFG5McGF9Tct4X0le1RweWtYGyPDYn4P4wFoW0-xF_r3gvMMUbGhsOshj4QmmnBIGSdIZBVEjEcyh0b1Qwftw-WsOWG6FDEyFcM62qGQHAWpBL-vp6Txa5MqvtcR7Ysg85C-7dCxZY2JBCNvQIzzWOHca2X1Cx8nEncaoJMuj-M',
-  metricOneLabel: 'Tâches automatisées',
-  metricOneValue: '128',
-  metricTwoLabel: 'Temps gagné',
-  metricTwoValue: '320h',
+  metricOneLabel: 'Heures économisées',
+  metricOneValue: '+320h',
+  metricTwoLabel: 'Gain Productivité',
+  metricTwoValue: '40h/mois',
   featuredTitle: 'Projets Sélectionnés',
   projects: [
     {

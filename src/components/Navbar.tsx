@@ -68,7 +68,10 @@ export function Navbar({ currentPage, onNavigate }: Props) {
           </button>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-end gap-3 lg:gap-4 ml-auto">
+          <button className="hidden md:flex items-center gap-2 bg-primary-container hover:scale-95 text-on-primary-container px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all">
+            Discuter d'un projet
+          </button>
           <button className="hidden sm:flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-bold transition-all">
             <span className="material-symbols-outlined text-[18px]">download</span>
             CV
