@@ -12,7 +12,11 @@ export function HomePage({ onNavigate }: Props) {
   return (
     <>
       <SEO title={homeData.metadata.title} description={homeData.metadata.description} />
-      <section className="relative min-h-screen flex items-center pt-32 lg:pt-40 pb-20 overflow-hidden">
+      {/* 
+        Le hero prend environ 85vh pour s'assurer que le bas de l'écran 
+        laisse entrevoir la section "Projets sélectionnés", incitant au scroll.
+      */}
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center pt-32 lg:pt-40 pb-12 overflow-hidden">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
         <div className="absolute top-1/2 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-[100px]" />
         <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-12 items-center">
@@ -93,7 +97,7 @@ export function HomePage({ onNavigate }: Props) {
         </div>
       </section>
 
-      <section className="py-32 relative">
+      <section className="pt-8 md:pt-16 pb-32 relative">
         <div className="max-w-7xl mx-auto px-8">
           <div className="mb-20">
             <h2 className="text-5xl font-black mb-4">
