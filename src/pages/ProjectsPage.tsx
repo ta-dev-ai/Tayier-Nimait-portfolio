@@ -1,6 +1,6 @@
 import { homeData } from '../data/pages/homeData';
 import { projectsData } from '../data/pages/projectsData';
-import { ProjectCard } from '../components/ProjectCard';
+import { ProjectDetailCard } from '../components/ProjectDetailCard';
 import { MethodCard } from '../components/MethodCard';
 import { SEO } from '../components/SEO';
 
@@ -42,7 +42,7 @@ export function ProjectsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {homeData.projects.map((card) => (
-          <ProjectCard
+          <ProjectDetailCard
             key={card.title}
             category={card.category}
             title={card.title}

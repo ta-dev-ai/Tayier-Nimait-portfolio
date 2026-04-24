@@ -1,6 +1,6 @@
 import type { PageKey } from '../types';
 import { homeData } from '../data/pages/homeData';
-import { ProjectCard } from '../components/ProjectCard';
+import { HomeProjectCard } from '../components/HomeProjectCard';
 import { MethodCard } from '../components/MethodCard';
 import { SEO } from '../components/SEO';
 
@@ -110,7 +110,7 @@ export function HomePage({ onNavigate }: Props) {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {homeData.projects.map((card) => (
-              <ProjectCard
+              <HomeProjectCard
                 key={card.title}
                 category={card.category}
                 title={card.title}
@@ -123,8 +123,6 @@ export function HomePage({ onNavigate }: Props) {
                 badgeTextClass={card.badgeTextClass}
                 badgeBorderClass={card.badgeBorderClass}
                 subtitle={(card as any).subtitle || ''}
-                problem={card.problem}
-                solution={card.solution}
                 impactLabel={card.impactLabel}
                 impactValue={card.impactValue}
               />
