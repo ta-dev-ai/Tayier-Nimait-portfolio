@@ -12,7 +12,7 @@ export function ProjectsPage() {
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest mb-6">
           <span className="w-2 h-2 rounded-full bg-primary-container animate-pulse" />
           <span className="text-xs font-bold tracking-widest text-secondary uppercase">
-            Portfolio 2024
+            Portfolio 2026
           </span>
         </div>
         <h1 className="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-none mb-8 text-on-background">

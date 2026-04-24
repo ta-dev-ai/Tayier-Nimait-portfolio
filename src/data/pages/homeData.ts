@@ -21,23 +21,24 @@ export const homeData = {
   featuredTitle: 'Projets Sélectionnés',
   projects: [
     {
-      category: 'Automatisation',
-      title: "Pipeline d'automatisation des données",
-      staticAlt: 'Data Pipeline visualization',
-      hoverAlt: 'Data flow animation',
+      category: 'Outil Interne',
+      title: 'Dashboard de Facturation & Génération PDF',
+      staticAlt: 'Interface facturation SaaS',
+      hoverAlt: 'Génération PDF automatisée',
       staticImage:
         'https://lh3.googleusercontent.com/aida-public/AB6AXuArzFoyNBfMPO_vS_wyeFLTWToj-hgttJmSTZXcEeyxF-cn2e7b65VHCpaR0b6bvSFNZ1_mLSSZIxYLLGIDPGGtxd_LWHM_XPDz6xylXHgsW2FtUwI-qnaLiVMLimz7kVRD61AY2_c12muYQxo7Hv_8zIuGEJsq8i8-nIYxOKThs3iuYZZ0YPCL-n7ibhahGRrd0NGl9iqaOLlZ73bzx-zTlkMYnI9ozWOI8NtrRyKUH8jIUyPzg3k524t_Du-uZxh22_JilnvZd5Y',
       hoverImage:
         'https://lh3.googleusercontent.com/aida-public/AB6AXuD_qjwherj_qH5b9JHpi2vvW-sCMpEUj7Efe4YmgsiTFuaFThJa2tC8jXmrsgjc1tFzSrU4icbS0QXJMCwYsVZGJz9msDB4WLWXKpSK_ievj7xOkxyp9SZLkk631wrajbXljiL2xenIEtoM4dEYUNaMlju_z2cvaqd2HPXqNa809__cldE53hogOyHlOWOFkmqP7nnHNuEmZNLMBF9eEwouKnKbf3NI2StymlnqR-jL2Wk24-3aS_94JamzzKcqgZBLtkVFOOu8jZQ',
-      icon: 'database',
+      icon: 'receipt_long',
       badgeBgClass: 'bg-secondary/20',
       badgeTextClass: 'text-secondary',
       badgeBorderClass: 'border-secondary/30',
       problem:
-        'Les équipes perdaient du temps sur des imports manuels et des contrôles répétitifs.',
-      solution: "J'ai conçu un pipeline automatisé pour fiabiliser le traitement des données.",
-      impactLabel: 'Impact',
-      impactValue: "Moins d'erreurs, traitement plus rapide.",
+        "La gestion des clients et factures sur tableur faisait perdre des heures chaque semaine, avec un risque d'erreurs élevé.",
+      solution:
+        "Création d'un Dashboard React complet conçu grâce à un pipeline IA : base client, édition intelligente, statuts et génération PDF.",
+      impactLabel: 'Impact Client',
+      impactValue: 'Factures générées en 2 clics. Zéro erreur de calcul.',
     },
     {
       category: 'Dashboard',
