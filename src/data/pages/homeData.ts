@@ -38,6 +38,8 @@ export const homeData = {
       solution: 'Dashboard React complet + pipeline IA + génération PDF automatisée.',
       impactLabel: 'Impact',
       impactValue: '-90% temps • 0 erreur',
+      status: 'MVP Validé',
+      statusColor: 'green' as const,
     },
     {
       category: 'Dashboard',
@@ -57,6 +59,8 @@ export const homeData = {
       solution: 'Dashboard interactif avec agrégation et suivi intelligent des tendances.',
       impactLabel: 'Impact',
       impactValue: '+40% productivité',
+      status: 'Version active',
+      statusColor: 'blue' as const,
     },
     {
       category: 'IA / NLP',
@@ -76,6 +80,8 @@ export const homeData = {
       solution: "Intégration d'un chatbot IA avec base vectorielle (RAG) et logique d'escalade.",
       impactLabel: 'Impact',
       impactValue: '-40% tickets support',
+      status: 'Version active',
+      statusColor: 'blue' as const,
     },
   ],
   activeProjects: [

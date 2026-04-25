@@ -126,6 +126,8 @@ export function HomePage({ onNavigate }: Props) {
                 subtitle={(card as any).subtitle || ''}
                 impactLabel={card.impactLabel}
                 impactValue={card.impactValue}
+                status={(card as any).status}
+                statusColor={(card as any).statusColor}
               />
             ))}
           </div>

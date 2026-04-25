@@ -12,6 +12,8 @@ type Props = {
   subtitle?: string;
   impactLabel: string;
   impactValue: string;
+  status?: string;
+  statusColor?: 'orange' | 'blue' | 'green';
 };
 
 export function HomeProjectCard({
@@ -28,7 +30,15 @@ export function HomeProjectCard({
   subtitle,
   impactLabel,
   impactValue,
+  status,
+  statusColor = 'green',
 }: Props) {
+  const statusColors = {
+    orange: 'bg-orange-500/20 text-orange-400 border-orange-500/30',
+    blue: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
+    green: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
+  };
+
   return (
     <div className="project-card morph-outset bg-surface-container rounded-2xl flex flex-col h-full border border-white/5 group hover:-translate-y-2 transition-all duration-300 overflow-hidden">
       {/* IMAGE + TITLE OVERLAY */}
@@ -46,10 +56,17 @@ export function HomeProjectCard({
         {/* Gradient plus fort pour lisibilité du titre */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-[#0b0f19]/60 to-transparent" />
 
-        {/* Badge en haut à droite */}
-        <div className="absolute top-4 right-4 z-10">
+        {/* Badges en haut */}
+        <div className="absolute top-4 left-4 right-4 z-10 flex justify-between items-start pointer-events-none">
+          {status && (
+            <span
+              className={`${statusColors[statusColor]} backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border animate-pulse`}
+            >
+              ● {status}
+            </span>
+          )}
           <span
-            className={`${badgeBgClass} backdrop-blur-md ${badgeTextClass} px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border ${badgeBorderClass}`}
+            className={`${badgeBgClass} backdrop-blur-md ${badgeTextClass} px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border ${badgeBorderClass} ml-auto pointer-events-auto`}
           >
             {category}
           </span>
